@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentList">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/light_black"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <TextView
+                android:id="@+id/tvTopText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Фрагмент2_ВерхнийТекст"
+                android:textSize="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/tvUnderTopText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Фрагмент2_ПодтекстВерха"
+                android:textColor="@color/light_gray"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTopText"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                >
+            </TextView>
+
+<!-- Здесь должен быть плеер -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:backgroundTint="@color/light_black"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/TopPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/TopTitleStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Фрагмент2_НижнийТекстТитул"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    </TextView>
+
+                    <RadioGroup
+                        android:id="@+id/TopButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toBottomOf="@+id/TopTitleStyle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/tvLinesPerPage"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+
+                        >
+
+                        <RadioButton
+                            android:id="@+id/ButtonClassic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="Classic"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            />
+                        <RadioButton
+                            android:id="@+id/ButtonDynamic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="Dynamic"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            />
+                        <RadioButton
+                            android:id="@+id/ButtonCathy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="Catchy"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tvLinesPerPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:textSize="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/TopButtons"
+                        android:text="@string/Фрагмент2_ВторойТитулТекст"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toTopOf="@+id/BottomButtons"
+                        >
+                    </TextView>
+
+                    <RadioGroup
+                        android:id="@+id/BottomButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvLinesPerPage"
+                        app:layout_constraintBottom_toTopOf="@+id/tvButtonThirstFragment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="25dp"
+                    >
+<!--Кнопка *Auto*-->
+
+                        <RadioButton
+                            android:id="@+id/ButtonAuto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="Auto"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/Button1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            />
+                        <RadioButton
+                            android:id="@+id/Button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            />
+                        <RadioButton
+                            android:id="@+id/Button3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/Button4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@color/transpared"
+                            android:text="4"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:background="@drawable/radio_selector"
+                            android:layout_weight="1"
+                            />
+
+
+                    </RadioGroup>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tvButtonThirstFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tvButton"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                >
+                            </TextView>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    

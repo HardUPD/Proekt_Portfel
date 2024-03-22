@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment_Setting">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/light_black"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Верхняя разметка титульного названия-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/TopSettingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verylight_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center"
+                        android:text="@string/ФрагментНастроек_НастройкиСубтитров"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imChevronBack"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/chevron_back"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        ></ImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Создание нижней части для вызова фрагмента-->
+
+            <TextView
+                android:id="@+id/tvCreateSub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/ФрагментНастроек_СозданиеСубтитров"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TopSettingTitle"></TextView>
+
+            <Switch
+                android:id="@+id/Switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:thumb="@drawable/custom_trumb"
+                android:track="@drawable/custom_truck"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TopSettingTitle">
+            </Switch>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:backgroundTint="@color/light_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCreateSub"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tvStartLanguage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/ФрагментНастроек_ИсходныйЯзык"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                    <TextView
+                        android:id="@+id/tvLanguageBonusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Русский"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="@id/tvStartLanguage"
+                        app:layout_constraintBottom_toBottomOf="@id/tvStartLanguage"
+                        app:layout_constraintEnd_toStartOf="@id/imPictureFlag"
+                        android:layout_marginEnd="10dp">
+
+                    </TextView>
+
+<!--Флаг для исходного языка-->
+
+                    <ImageView
+                        android:id="@+id/imPictureFlag"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/russia"
+                        app:layout_constraintTop_toTopOf="@id/tvLanguageBonusText"
+                        app:layout_constraintBottom_toBottomOf="@id/tvLanguageBonusText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="20dp"
+                        >
+
+                    </ImageView>
+
+<!--Стиль субтитров-->
+
+                    <TextView
+                        android:id="@+id/tvStyleSubs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/ФрагментНастроек_СтильСубтитров"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStartLanguage"
+                        >
+                    </TextView>
+
+<!--Тип стиля субтитров-->
+
+                    <TextView
+                        android:id="@+id/tvTextClassSubs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Классический"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="@+id/tvStyleSubs"
+                        app:layout_constraintBottom_toBottomOf="@id/tvStyleSubs"
+                        app:layout_constraintEnd_toStartOf="@+id/imChevronRight"
+                        android:layout_marginEnd="10dp">
+                    </TextView>
+
+<!--Шеврон для стиля субтитров-->
+
+                    <ImageView
+                        android:id="@+id/imChevronRight"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTextClassSubs"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTextClassSubs"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/chevron_right"
+                        >
+                    </ImageView>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStyleSubs"
+                        >
+                    </View>
+
+<!--Перевод субтитров-->
+
+                    <TextView
+                        android:id="@+id/tvTranslateSubs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/ФрагментНастроек_ПеревестиСубтитры"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStyleSubs">
+                    </TextView>
+
+<!--Switch для перевода субтитров-->
+
+                    <Switch
+                        android:id="@+id/Switch2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:thumb="@drawable/custom_trumb"
+                        android:track="@drawable/custom_truck"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1"
+                        >
+                    </Switch>
+
+<!--Перевести субтитра на определенный язык-->
+
+                    <TextView
+                        android:id="@+id/tvSubTextSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ФрагментНастроек_ПеревестиСубтитрыНа"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTranslateSubs"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        tools:visibility="visible">
+                    </TextView>
+
+<!--Язык на который переводится-->
+
+                    <TextView
+                        android:id="@+id/tvTextTransSubs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Русский"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="@+id/tvSubTextSubtitle"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSubTextSubtitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imChevronRight"
+                        android:layout_marginEnd="10dp">
+                    </TextView>
+
+<!--Флаг страны перевода субтитров-->
+
+                    <ImageView
+                        android:id="@+id/imFlagTransSubs"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTextTransSubs"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTextTransSubs"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/russia"
+                        >
+                    </ImageView>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubTextSubtitle">
+                    </View>
+
+<!--Закадровый голос-->
+
+                    <TextView
+                        android:id="@+id/tvBackSing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/ФрагментНастроек_ЗакадровыйГолос"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubTextSubtitle">
+                    </TextView>
+
+<!--Switch для закадрового голоса-->
+
+                    <Switch
+                        android:id="@+id/Switch3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:thumb="@drawable/custom_trumb"
+                        android:track="@drawable/custom_truck"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2">
+                    </Switch>
+
+<!--Язык озвучки-->
+
+                    <TextView
+                        android:id="@+id/tvLanguageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ФрагментНастроек_ЯзыкОзвучки"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/tvBackSing"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        tools:visibility="visible"
+                        >
+                    </TextView>
+<!--Название языка озвучки-->
+                    <TextView
+                        android:id="@+id/tvLanguageVoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Русский"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="@+id/tvLanguageText"
+                        app:layout_constraintBottom_toBottomOf="@id/tvLanguageText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imFlagVoice"
+                        android:layout_marginEnd="10dp">
+                    </TextView>
+<!--Флаг страны озвучки-->
+
+                    <ImageView
+                        android:id="@+id/imFlagVoice"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLanguageVoice"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvLanguageVoice"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/russia"
+                        >
+                    </ImageView>
+
+<!--Тип голоса озвучки-->
+
+                    <TextView
+                        android:id="@+id/tvTypeSing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ФрагментНастроек_ТипГолоса"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/tvLanguageText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        tools:visibility="visible"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvTextTypeVoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arnau"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="@+id/tvTypeSing"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTypeSing"
+                        app:layout_constraintEnd_toStartOf="@+id/imChevronRight2"
+                        android:layout_marginEnd="10dp">
+                    </TextView>
+
+                    <!--Шеврон для типа голоса-->
+
+                    <ImageView
+                        android:id="@+id/imChevronRight2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTextTypeVoice"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTextTypeVoice"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/chevron_right"
+                        >
+                    </ImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

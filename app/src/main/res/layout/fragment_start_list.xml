@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/cvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="-20dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tvTitul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Титул1"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/white"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/Текст1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitul">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imCircles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/tvButtonFirstFragment"
+                app:layout_constraintTop_toBottomOf="@+id/tvText"
+                tools:layout_editor_absoluteX="0dp">
+
+                <View
+                    android:id="@+id/Circle2Gray"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/item_circle_grey"></View>
+
+                <View
+                    android:id="@+id/Circle1Blue"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/item_circle_blue"></View>
+
+                <View
+                    android:id="@+id/Circle3Gray"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:background="@drawable/item_circle_grey"></View>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tvButtonFirstFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/imCircles"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:cardCornerRadius="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvButton"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        >
+                    </TextView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

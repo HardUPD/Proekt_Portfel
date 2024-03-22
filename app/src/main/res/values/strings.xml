@@ -1,0 +1,26 @@
+<resources>
+    <string name="Титул1">Auto Recognition</string>
+    <string name="Текст1">Lots of ways to add subtitles \n to your video in no time.</string>
+    <string name="tvButton">Continue</string>
+    <string name="Титул2">Subtitle Style</string>
+    <string name="Текст2">Select the subtitle display style \n that is perfect for your project</string>
+    <string name="Фрагмент2_ВерхнийТекст">Choose subtitle style</string>
+    <string name="Фрагмент2_ПодтекстВерха">You can customize it later</string>
+    <string name="Фрагмент2_НижнийТекстТитул">Style subtitles</string>
+    <string name="Фрагмент2_КнопкаКлассика">Classic</string>
+    <string name="Фрагмент2_КнопкаДинамическая">Dynamic</string>
+    <string name="Фрагмент2_Кнопка">Catchy</string>
+    <string name="Фрагмент2_ВторойТитулТекст">Liner per page</string>
+    <string name="Фрагмент2_КнопкаАвто">Auto</string>
+    <string name="ФрагментНастроек_СозданиеСубтитров">Creating subtitles from video</string>
+    <string name="ФрагментНастроек_НастройкиСубтитров">Subtitle settings</string>
+    <string name="ФрагментНастроек_ИсходныйЯзык">Source language</string>
+    <string name="ФрагментНастроек_СтильСубтитров">Subtitle style</string>
+    <string name="ФрагментНастроек_ПеревестиСубтитры">Translate subtitles</string>
+    <string name="ФрагментНастроек_ПеревестиСубтитрыНа">Translate the subtitles to</string>
+    <string name="ФрагментНастроек_ЗакадровыйГолос">Voice-over</string>
+    <string name="ФрагментНастроек_ЯзыкОзвучки">Voiceover language</string>
+    <string name="ФрагментНастроек_ТипГолоса">Voice type</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

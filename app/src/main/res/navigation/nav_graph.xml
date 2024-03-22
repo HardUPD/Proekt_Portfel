@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startListFragment2">
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.example.proekt_portfel.FragmentList"
+        android:label="fragment__list"
+        tools:layout="@layout/fragment__list" >
+        <action
+            android:id="@+id/action_fragmentList_to_fragment_Setting"
+            app:destination="@id/fragment_Setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/startListFragment2"
+        android:name="com.example.proekt_portfel.StartListFragment"
+        android:label="StartListFragment" >
+        <action
+            android:id="@+id/action_startListFragment2_to_fragment_Setting"
+            app:destination="@id/fragment_Setting" />
+        <action
+            android:id="@+id/action_startListFragment2_self"
+            app:destination="@id/startListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLanguagelist"
+        android:name="com.example.proekt_portfel.FragmentLanguagelist"
+        android:label="fragment__language_list"
+        tools:layout="@layout/fragment__language_list" >
+        <action
+            android:id="@+id/action_fragmentLanguagelist_to_fragment_Setting2"
+            app:destination="@id/fragment_Setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Setting"
+        android:name="com.example.proekt_portfel.Fragment_Setting"
+        android:label="fragment__setting"
+        tools:layout="@layout/fragment__setting" >
+        <action
+            android:id="@+id/action_fragment_Setting_to_startListFragment22"
+            app:destination="@id/startListFragment2" />
+        <action
+            android:id="@+id/action_fragment_Setting_to_fragmentLanguagelist2"
+            app:destination="@id/fragmentLanguagelist" />
+        <action
+            android:id="@+id/action_fragment_Setting_to_fragmentList"
+            app:destination="@id/fragmentList" />
+    </fragment>
+</navigation>
